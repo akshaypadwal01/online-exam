@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+html{
+    scroll-behavior: smooth;
+    /* transition: scroll-behavior 500ms ease-in; */
+}
+:root{
+    --secondary-color:white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Scroll Watcher */
+.scroll-watcher{
+    height: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient( 329deg, #25a4c3,rgb(19, 231, 104));
+    /* background-color: linear-gradient( rgb(89, 199, 229),blue); */
+    width: 100%;
+    /* scale: 0 1; */
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: -11px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #26bbbc;
+  padding: 20px 25px;
+  display: flex; /* Display flex to align items in a row */
+  justify-content: space-between; /* Space between logo and header-right */
+  align-items: center; /* Center vertically */
+}
+
+.header a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 31px;
+  padding: 12px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex; /* To align image and text */
+  align-items: center; /* Center vertically */
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: rgb(22, 140, 136);
+  color: white;
+  margin: 5px;
+}
+
+.header-right {
+  display: flex; /* Display links horizontally */
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a,
+  .header-right {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center horizontally */
+  }
+}
+
+
+
+
+
+
+
+/* Hero Section */
+
+
+ .hero-section {
+    position: relative;
+    height: 80vh; /* Adjust as needed */
+    background-image: url('IMG/bg1.jpeg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Text color on top of the image */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a text shadow for better readability */
+  }
+
+  .hero-content {
+    z-index: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 7777777777777777777777 */
+#features {
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  font-size: 40px;
+  color: black;
+  background-color:#c2d2e4;
+
+}
+.features {
+  height: 150svh;
+  /* border: 2px solid black; */
+  display: grid;
+  grid-template-columns: repeat(2, 400px); /* Three columns with equal width */
+  grid-template-rows: repeat(2, 450px); /* Two rows with a fixed height of 100px */
+  gap: 80px; /* Gap between grid items */
+  /* padding: 0 0 34px 0;/ */
+  margin: 0px 0px 0px 10px;
+  justify-content: center;
+  scale: 1; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-duration: entry -50px;
+  background-color:#c2d2e4;
+}
+.feat {
+  background-color: rgb(231, 233, 231);
+  border: 1px solid rgb(217, 221, 216);
+  border-radius: 10px;
+  color: black;
+  padding: 30x 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;;
+}
+.feat img{
+  width:100px;
+  height: 100px;    
+}
+.feats img{
+  width: 136px;
+}
+.feat p{
+  text-align: center;
+  padding: 9px;
+  text-wrap: balance;
+}
+.feat:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:white;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  color: black;
+  z-index: 9999; /* Ensure the popup is above other content */
+}
+
+.popup-content {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Testimonials Section and Slider */
+.infinite-scroll{
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #a9d26575;
+  margin-top: 90px;
+}
+#tests{
+  font-size: 30px;
+  color: black;
+}
+.tag-list{
+  margin:0;
+  padding-inline:0;
+  list-style: none;
+}
+.tag-list .slide{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem rgb(86, 82, 82);
+  width: 35vw;
+  background-color: #87ebc3;
+}
+.tests{
+  width: 35svw;
+  height: 50svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.tests p{
+  /* font-style: italic; */
+  text-align: center;
+  text-wrap: balance;
+  font-size: 19px;
+  color: black;
+  padding: 12px;
+}
+.tests .img{
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 200%;
+}
+.tests .img img{
+  width: 100px;
+  height: 100px;
+  border-radius: 200%;
+  object-fit: cover;
+}
+.scroller{
+  max-width: 80svw; 
+  /* outline: 3px solid lime; */
+}
+.scroller__inner{
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3rem;
+  animation: scrollLeft var(--animation-duration, 40s) linear infinite; /* Animation for scrolling */
+
+}
+.scroller[data-animated=true]{
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+  );
+  mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+  );
+}
+.scroller[data-animated=true] .scroller__inner{
+  width: max-content;
+  flex-wrap: nowrap; 
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+}
+.scroller[data-duration = "slow"]{
+  --animation-duration: 40s;
+}
+
+
+
+
+.scroller {
+  max-width: 100%; /* Adjust as needed */
+  overflow: hidden; /* Hides the content that overflows */
+  position: relative; /* Needed for absolute positioning of the inner content */
+}
+
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); } /* Starting position */
+  100% { transform: translateX(calc(-100% - 3rem)); } /* Scrolls entire width of the content */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+@keyframes scroll-watcher{
+  from{scale: 0 1;}
+  to {scale: 1 1; }
+}
+@keyframes fade-out{
+  to{
+      opacity: 0;
+  }
+}
+@keyframes fade-in {
+  to{scale: 1; opacity: 1;}
+}
+@keyframes scroll {
+  to{
+      transform: translate(calc(-50% - 1rem));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  background-color:#26bbbc; 
+  color: white;
+  height: 265px;
+  margin-top: 0px;
+}
+.foot{
+  display: grid;
+  grid-template-areas: "foot1 foot2 foot2";
+}
+.footer-content {
+  grid-area: foot2;
+  padding: 15px 0px 15px 0px;
+  height: 160px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+}
+.left-section{
+  grid-area: foot1;
+  height: 190px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.left-section img{
+  align-self: center;
+  width: 100px;
+  height: 100px;
+}
+.left-section .heading1{
+  align-self: center;
+  height: 100px;
+  /* border: 1px solid black; */
+  font-size: 35px;
+  font-weight: 800;
+  width: 280px;
+  margin-left: 15px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: #fff;
+}
+.useful-links h2, .facility-links h2{
+  padding-bottom: 6px;
+  margin-bottom:10px;
+  border-bottom: 3px solid green;
+} 
+.useful-links ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 10px;
+  font-style: normal;
+  color: rgb(246, 249, 252);  
+  gap: 14px;
+}
+.facility-links ul{
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px 28px;
+
+}
+.address {
+  /* border: 1px solid black; */
+  align-self: flex-end;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 10px;
+  font-style: normal;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#adr{
+  width: 480px;
+  word-wrap: break-word;
+}
+.copbut{
+  padding: 0px 25px;
+  height: 70px;
+  /* background-color: rgb(191, 228, 135); */
+  display: grid;
+  grid-template-areas: "footer";
+}
+.copbut>*{
+  grid-area: footer;
+}
+.copbut .copyright{
+  justify-self: flex-start;
+  align-self: center;
+}
+.copbut p{
+  font-size: 15px;
+}
+.buttons{
+  justify-self: flex-end;
+  align-self: flex-start;
+  margin-right: 170px;
+  display: flex;
+  gap: 20px;
+}
+.buttons button{
+  background-color: transparent;
+  display: inline-flex;
+justify-content: center;
+align-items: center;
+  width:  40px;
+  border: none;
+  border-radius: 5px;
+  transition: transform 100ms ease-in-out;
+}
+.buttons button:hover{
+  background-color: green;
+  transform: scale(1.1);
+}
+.buttons button img{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+button img:hover{
+  filter: invert(100%);
+}
+
+
+
+
+
+
+
+
+
+/* Example of a media query */
+@media screen and (max-width: 768px) {
+  /* CSS rules for screens with a maximum width of 768px */
+}
+/* Example of media query for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .header {
+    padding: 15px 20px; /* Adjust padding for smaller header */
+  }
+
+  /* Example of making the header links stack vertically on smaller screens */
+  .header a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Adjustments for smaller hero section */
+  .hero-section {
+    height: 50vh;
+  }
+
+  /* Adjustments for smaller features grid */
+  .features {
+    grid-template-columns: repeat(1, 100%); /* Change to single column layout */
+    gap: 20px; /* Reduce gap between features */
+  }
+
+  /* Adjustments for smaller testimonials section */
+  .scroller {
+    max-width: 90%; /* Reduce width of scroller on smaller screens */
+  }
+}
+
+
+/* Responsive Adjustments  */
+
+
+/* Example of a media query */
+@media screen and (max-width: 768px) {
+  /* CSS rules for screens with a maximum width of 768px */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjust padding for smaller header */
+  .header {
+    padding: 15px 20px;
+  }
+
+  /* Make the header links stack vertically on smaller screens */
+  .header a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Adjustments for smaller hero section */
+  .hero-section {
+    height: 50vh;
+  }
+
+  /* Adjustments for smaller features grid */
+  .features {
+    grid-template-columns: repeat(1, 100%);
+    gap: 20px;
+  }
+
+  /* Adjustments for smaller testimonials section */
+  .scroller {
+    max-width: 90%;
+  }
+}
+
+/* Footer adjustments */
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .left-section img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .left-section .heading1 {
+    font-size: 25px;
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  .useful-links ul {
+    font-size: 16px;
+  }
+
+  .facility-links ul {
+    font-size: 16px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
+
+  .foot {
+    height: auto;
+  }
+}
